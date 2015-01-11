@@ -4,7 +4,7 @@
 
   <button class="btn btn-default" ng-click="reviewFormCtrl.showForm = !reviewFormCtrl.showForm">{{reviewFormCtrl.showForm ? "Cancel" : "Create Review"}}</button>
   <hr />
-  <review-form ng-show="reviewFormCtrl.showForm"></review-form>
+  <review-form books='readingListCtrl.books' genres='readingListCtrl.genres' ng-show="reviewFormCtrl.showForm"></review-form>
   <hr />
 
   <ul class="list-unstyled col-sm-8">
