@@ -53,12 +53,36 @@
 
   var books = [
     {
-      title: 'A Game of Thrones: A Song of Ice and Fire',
-      author: 'George R.R. Martin',
-      isbn: '0553593714',
-      review: 'The most inventive and entertaining fantasy saga of our time—warrants one hell of an introduction. I loved this book!',
+      title: 'Speaking Javascript',
+      author: 'Axel Rauschmayer',
+      isbn: '1449365035',
+      review: 'Tremendous JS reference book to read in addition to an MOOC',
+      rating: 5,
+      genres: { 'JavaScript': true }
+    },
+    {
+      title: 'Learn to Program',
+      author: 'Chris Pine',
+      isbn: '1934356360',
+      review: 'The single best intro to Ruby book out there. And programming in general. Introduces complex ideas in a fun,easy way.',
+      rating: 5,
+      genres: { 'Ruby': true }
+    },
+    {
+      title: 'The Well Grounded Rubyist',
+      author: 'David Black',
+      isbn: '1933988657',
+      review: 'Great book to help hone your Ruby skills!',
+      rating: 5,
+      genres: { 'Ruby': true }
+    },
+    {
+      title: 'Pro AngularJS',
+      author: 'Andy Freeman',
+      isbn: '1430264489',
+      review: 'SOlid book to complement on MOOC',
       rating: 4,
-      genres: { 'non-fiction': true, fantasy: true }
+      genres: { 'AngularJS': true, 'JavaScript': true }
     }
   ];
 })();

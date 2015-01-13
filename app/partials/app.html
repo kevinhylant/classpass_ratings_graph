@@ -1,4 +1,4 @@
-<h1>Angular Reading List of Awesome</h1>
+<h1>Kevin's Programming Books</h1>
 
 <div class="row" ng-controller="ReadingListController as readingListCtrl">
 
@@ -8,7 +8,11 @@
   <hr />
 
   <ul class="list-unstyled col-sm-8">
-    <li class="book row" ng-repeat="book in readingListCtrl.books">
+    
+    <strong>Search for a Book &nbsp&nbsp</strong><input type='text' data-ng-model='name'/>
+    <br><hr />
+
+    <li class="book row" ng-repeat="book in readingListCtrl.books | filter:name | orderBy:'title'">
 
       <book-cover></book-cover>
 
