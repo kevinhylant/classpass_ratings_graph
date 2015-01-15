@@ -1,7 +1,9 @@
 (function(){
   'use strict';
 
-  var a = angular.module('readingList', []);
+  var a = angular.module('classPassRatings', []);
+
+  
 
   a.controller("RatingsController", function(){
     this.reviews = reviews;

@@ -15,15 +15,22 @@
     <li class="book row" ng-repeat="review in ratingsCtrl.reviews | filter:studio | orderBy:'studio'">
 
       <div class="col-sm-9">
-        <h3>{{review.studio}}</h3>
+        <h3>{{review.studio}}<span class='cp_blue'>&nbsp{{review.rating}} Star(s)</span></h3>
 
         <cite class="text-muted">Written by {{review.author}}</cite>
 
         <p>{{review.review_text}}</p>
 
-        <activities></activities>
+        <!-- <activities review= 'review' ></activities> -->
+        <ul class='list-unstyled'>
+          <li> 
+            <span class='label label-primary' ng-repeat="(activity, state) in review.activities" ng-show="state">{{activity}}</span>
+          </li>
+        </ul>
 
       </div>
     </li>
   </ul>
 </div>
+
+ 
