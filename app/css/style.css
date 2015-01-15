@@ -1,4 +1,15 @@
 /*Super specific selectors were used in this file to be sure and override any bootstrap madness.*/
+
+.logo {
+  text-transform: uppercase;
+}
+.logo_part_1 {
+  color: black;
+}
+.cp_blue {
+  color: #40C6B9;
+}
+/* - - - - - - */
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;

@@ -3,18 +3,18 @@
 
   var a = angular.module('readingList', []);
 
-  a.controller("ReadingListController", function(){
-    this.books = books;
-    this.genres = genres;
+  a.controller("RatingsController", function(){
+    this.reviews = reviews;
+    this.activities = activities;
   });
 
-  a.directive("bookGenres", function(){
+  a.directive("activities", function(){
     return {
       restrict: 'E',
-      templateUrl: 'partials/book-genres.html',
+      templateUrl: 'partials/activities.html',
       replace: true,
       scope: {
-        genres: '='
+        activities: '='
       }
     };
   });
@@ -27,6 +27,14 @@
     };
   });
 
+  a.directive("header", function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/header.html',
+      replace: true
+    };
+  });
+
   a.directive("reviewForm", function(){
     return {
       restrict: 'E',
@@ -34,55 +42,30 @@
       replace: true,
       controller: function(){
         this.showForm = false;
-        this.book = {genres:{}};
+        this.review = {activities:{}};
         this.addReview = function(form){
-          books.push(this.book);
-          this.book = {genres:{}};
+          reviews.push(this.review);
+          this.review = {activities:{}};
           form.$setPristine();
         };
       },
       controllerAs: 'reviewFormCtrl',
       scope: {
-        books: '=',
-        genres: '='
+        reviews: '=',
+        activities: '='
       }
     };
   });
 
-  var genres = [ 'programming', 'javascript', 'ruby', 'php','python','rails','jquery','angular','node' ];
+  var activities = [ 'Yoga', 'Cycling', 'Barre', 'Pilates','Strength Training','Dance'];
 
-  var books = [
+  var reviews = [
     {
-      title: 'Speaking Javascript',
-      author: 'Axel Rauschmayer',
-      isbn: '1449365035',
-      review: 'Tremendous JS reference book to read in addition to an MOOC',
+      studio: 'EPIC Hybrid Training',
+      author: 'Kevin Hylant',
+      review_text: 'Leanne is the best trainer...period.',
       rating: 5,
-      genres: { 'JavaScript': true }
-    },
-    {
-      title: 'Learn to Program',
-      author: 'Chris Pine',
-      isbn: '1934356360',
-      review: 'The single best intro to Ruby book out there. And programming in general. Introduces complex ideas in a fun,easy way.',
-      rating: 5,
-      genres: { 'Ruby': true }
-    },
-    {
-      title: 'The Well Grounded Rubyist',
-      author: 'David Black',
-      isbn: '1933988657',
-      review: 'Great book to help hone your Ruby skills!',
-      rating: 5,
-      genres: { 'Ruby': true }
-    },
-    {
-      title: 'Pro AngularJS',
-      author: 'Andy Freeman',
-      isbn: '1430264489',
-      review: 'SOlid book to complement on MOOC',
-      rating: 4,
-      genres: { 'AngularJS': true, 'JavaScript': true }
+      activities: { 'Strength Training': true }
     }
   ];
 })();
