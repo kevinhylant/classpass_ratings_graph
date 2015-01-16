@@ -10,8 +10,6 @@
       </h3>
       <cite class="text-muted">Written by {{reviewFormCtrl.review.author}}</cite>
 
-      <p>{{reviewFormCtrl.review.review_text || "No feedback yet."}}</p>
-
       <ul class="list-unstyled">
         <li ng-repeat="(activity, state) in reviewFormCtrl.review.activities">
           <span class="label label-primary" ng-show="state">{{activity}}</span>
@@ -34,14 +32,6 @@
     <span class="col-sm-9">
       <input type="text" id="author" class="form-control" ng-model="reviewFormCtrl.review.author"
       placeholder="Your Name"></span>
-    </fieldset>
-
-    <fieldset class="form-group">
-      <label class="control-label col-sm-2" for="review">Review</label>
-      <span class="col-sm-9">
-        <textarea id="review" class="form-control" cols="30" rows="3" ng-model="reviewFormCtrl.review.review_text"
-        placeholder="Please Share Your Feedback"></textarea>
-      </span>
     </fieldset>
 
     <fieldset class="form-group">

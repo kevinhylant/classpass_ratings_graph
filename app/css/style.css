@@ -2,6 +2,7 @@
 
 .logo {
   text-transform: uppercase;
+  text-align: left !important;
 }
 .logo_part_1 {
   color: black;
